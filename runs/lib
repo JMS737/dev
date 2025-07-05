@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 yay -S --noconfirm --needed btop
-yay -S --noconfirm --needed pwvucontrol
+yay -S --noconfirm --needed pwvucontrol waybar
