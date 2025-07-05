@@ -9,3 +9,5 @@ print_command=true
 insensitive=true
 prompt=
 columns=2
+key_expand=End
+no_actions=true
