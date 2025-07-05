@@ -1,3 +1,9 @@
 #!/usr/bin/env bash
 
-ssh-keygen -t ed25519 -f ~/.ssh/id_rsa -N ''
+KEYFILE=$HOME/.ssh/id_ed25519
+
+if [ -f $KEYFILE ]; then
+	echo "SSH keys already generated at $KEYFILE"
+else
+	ssh-keygen -t ed25519 -f $KEYFILE -N ''
+fi
