@@ -119,7 +119,7 @@
   "clock": {
     "interval": 1,
     "timezone": "Europe/London",
-    "format": "<span color='#BF00FF'>  </span>{:%H:%M} ",
+    "format": "<span color='#BF00FF'>  </span>{:%H:%M, %a %d} ",
     "tooltip": true,
     "tooltip-format": "{:L%Y/%m/%d, %A}"
   },
