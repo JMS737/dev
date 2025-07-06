@@ -2,4 +2,7 @@
 
 yay -S --noconfirm --needed btop pwvucontrol waybar hyprpicker hyprpaper unzip
 
+# allows you to send desktop notifications via dunst from the cli
+yay -S --noconfirm --needed libnotify
+
 
