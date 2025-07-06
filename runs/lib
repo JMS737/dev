@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-yay -S --noconfirm --needed btop
-yay -S --noconfirm --needed pwvucontrol waybar
+yay -S --noconfirm --needed btop pwvucontrol waybar hyprpicker hyprpaper unzip
 
 
