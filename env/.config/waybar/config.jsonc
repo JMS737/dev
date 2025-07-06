@@ -12,6 +12,7 @@
   ],
   "modules-center": ["hyprland/window"],
   "modules-right": [
+    "mpris",
     "network",
     "battery",
     "bluetooth",
@@ -61,12 +62,12 @@
     "tooltip-format": "Shutdown"
   },
   "network": {
-    "format-wifi": "<span color='#00FFFF'> 󰤨 </span>{essid} ",
-    "format-ethernet": "<span color='#7FFF00'> </span>Wired ",
-    "tooltip-format": "<span color='#FF1493'> 󰅧 </span>{bandwidthUpBytes}  <span color='#00BFFF'> 󰅢 </span>{bandwidthDownBytes}",
-    "format-linked": "<span color='#FFA500'> 󱘖 </span>{ifname} (No IP) ",
-    "format-disconnected": "<span color='#FF4040'>  </span>Disconnected ",
-    "format-alt": "<span color='#00FFFF'> 󰤨 </span>{signalStrength}% ",
+    "format-wifi": " <span color='#00FFFF'> 󰤨 </span>{essid} ",
+    "format-ethernet": " <span color='#7FFF00'> </span>Wired ",
+    "tooltip-format": " <span color='#FF1493'> 󰅧 </span>{bandwidthUpBytes}  <span color='#00BFFF'> 󰅢 </span>{bandwidthDownBytes}",
+    "format-linked": " <span color='#FFA500'> 󱘖 </span>{ifname} (No IP) ",
+    "format-disconnected": " <span color='#FF4040'>  </span>Disconnected ",
+    "format-alt": " <span color='#00FFFF'> 󰤨 </span>{signalStrength}% ",
     "interval": 1
   },
   "battery": {
@@ -148,5 +149,21 @@
     "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
     "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
+  },
+  "mpris": {
+	"format": " <span color='#FF2DF1'>{player_icon}</span> {dynamic} ",
+	"format-paused": "  <span color='#FF2DF1'>{status_icon}</span>   <i>{dynamic}</i> ",
+	"interval": 1,
+	"dynamic-len": 40,
+	"player-icons": {
+		"default": "▶",
+		"mpv": "🎵",
+		"tidal-hifi": "",
+		"brave" : ""
+	},
+	"status-icons": {
+		"paused": "⏸"
+	}
+	// "ignored-players": ["firefox"]
   }
 }
