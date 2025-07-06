@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+# Ensure that the [multilib] section has been uncommented in /etc/pacman.conf
+# Steam requires access to some of the 32bit libraries / binaries included in these repositories
+
+yay -S --noconfirm --needed steam
