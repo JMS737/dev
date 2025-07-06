@@ -27,6 +27,11 @@
   border-width: 0px;
 }
 
+#tray menu * {
+  color: #535353;
+  font-weight: normal;
+}
+
 #clock,
 #custom-power{
   background-color: rgba(15,27,53,0.9);
