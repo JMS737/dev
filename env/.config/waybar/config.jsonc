@@ -122,7 +122,7 @@
     "timezone": "Europe/London",
     "format": "<span color='#BF00FF'>  </span>{:%H:%M, %a %d} ",
     "tooltip": true,
-    "tooltip-format": "{:L%Y/%m/%d, %A}"
+    "tooltip-format": "{:L%Y/%m/%d}"
   },
   "tray": {
     "icon-size": 17,
