@@ -43,4 +43,7 @@
 # resize-overlay-duration = 4s 200ms
 theme = catppuccin-frappe
 font-family = "JetBrainsMono Nerd Font Mono"
-background-opacity = 0.9
+
+# opacity is set in the hyprland.conf so we can use blur
+#background-opacity = 0.9
+
