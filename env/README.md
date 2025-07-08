@@ -1,6 +1,6 @@
 # Home Configuration
 
-## bash / zshs
+## bash / zsh
 
 `.profile`/`.zprofile` - Scripts that get executed on login, use these for environment variables which need to be set for apps / services.
 
