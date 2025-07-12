@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-CONFIG_FILE=$XDG_CONFIG_HOME/wallpapers/theme.conf
+CONFIG_FILE="$HOME/.local/share/wallpapers/theme.conf"
 
 THEME=""
 if [ -f $CONFIG_FILE ]; then
