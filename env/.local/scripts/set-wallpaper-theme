@@ -12,11 +12,23 @@ else
 fi
 
 if [ -z $current_theme ]; then
-	current_theme="All"
+	current_theme="all"
 fi
 
-THEMES="$(find "$WALLPAPER_DIR" -mindepth 1 -maxdepth 1 -type d -printf '%f\n' | sort)"
+THEMES=$(find "$WALLPAPER_DIR" -mindepth 1 -maxdepth 1 -type d -printf '%f\n' | sort)
+THEMES="all
+$THEMES"
 
-echo "$THEMES" | wofi -d -O=alphabetical -p "current theme '$current_theme' (escape for all)" > $CONFIG_FILE
+new_theme=$(echo "$THEMES" | wofi -d -p "current theme : '$current_theme'")
+
+if [ -z $new_theme ]; then
+	exit
+fi
+
+if [ $new_theme = "all" ]; then
+	new_theme=""
+fi
+
+echo $new_theme > $CONFIG_FILE
 
 set-random-wallpaper
