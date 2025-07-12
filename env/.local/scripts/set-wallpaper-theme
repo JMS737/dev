@@ -5,10 +5,18 @@ CONFIG_FILE=$CONFIG_DIR/theme.conf
 
 if [ ! -d $CONFIG_DIR ]; then
 	mkdir $CONFIG_DIR
+else
+	if [ -f $CONFIG_FILE ]; then
+		current_theme="$(cat $CONFIG_FILE)"
+	fi
+fi
+
+if [ -z $current_theme ]; then
+	current_theme="All"
 fi
 
 THEMES="$(find "$WALLPAPER_DIR" -mindepth 1 -maxdepth 1 -type d -printf '%f\n' | sort)"
 
-echo "$THEMES" | wofi -d -O=alphabetical -p "Pick a theme (escape for all)" > $CONFIG_FILE
+echo "$THEMES" | wofi -d -O=alphabetical -p "current theme '$current_theme' (escape for all)" > $CONFIG_FILE
 
 set-random-wallpaper
