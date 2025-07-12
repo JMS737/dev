@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+# Configure DNS
+echo "HomeLab DNS Server IP:"
+read IPADDR
+# Find the name of the interface you want to change with:
+nmcli con
+
+echo "Please enter the name of the connection to modify:"
+read CON
+
+# Then update the dns for that device with:
+nmcli con mod "$CON" ipv4.dns "$IPADDR"
+
+echo "Setting DNS server(s) to '$IPADDR' for '$CON'. Is this correct? Y/n:"
+read yn
+case $yn in
+	[yY] ) 
+		break;;
+	[nN] )
+		exit;;
+	* )
+		echo "Invalid response"
+		exit;;
+esac
+
+# Restart to apply the changes
+systemctl restart NetworkManager.service

@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+if [ ! -d /nas ]; then
+	mkdir /nas
+fi
+
+if [ -z $1 ]; then
+	echo "Usage 'nas-fstab <hostname>'"
+	exit
+fi
+
+HOST=$1
+CRED_DIR=$XDG_DATA_HOME/nas
+CRED_FILE=$CRED_DIR/smb-credentials
+
+echo "
+//$HOST/vault /nas/vault cifs defaults,credentials=$CRED_FILE,uid=$(id -u)
+//$HOST/scratch /nas/scratch cifs defaults,credentials=$CRED_FILE,uid=$(id -u)
+//$HOST/media /nas/media cifs defaults,credentials=$CRED_FILE,uid=$(id -u)
+//$HOST/shared /nas/shared cifs defaults,credentials=$CRED_FILE,uid=$(id -u)
+//$HOST/games /nas/games cifs defaults,credentials=$CRED_FILE,uid=$(id -u)
+//$HOST/archives /nas/archives cifs defaults,credentials=$CRED_FILE,uid=$(id -u)
+"
