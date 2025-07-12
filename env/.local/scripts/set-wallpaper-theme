@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-CONFIG_DIR="$HOME/.local/share/wallpapers"
+CONFIG_DIR="$HOME/.config/wallpapers"
 CONFIG_FILE=$CONFIG_DIR/theme.conf
 
 if [ ! -d $CONFIG_DIR ]; then
