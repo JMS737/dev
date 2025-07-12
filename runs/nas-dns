@@ -15,7 +15,9 @@ nmcli con mod "$CON" ipv4.dns "$IPADDR"
 echo "Setting DNS server(s) to '$IPADDR' for '$CON'. Is this correct? Y/n:"
 read yn
 case $yn in
-	[yY] ) 
+	[yY] )
+		break;;
+	"")
 		break;;
 	[nN] )
 		exit;;
