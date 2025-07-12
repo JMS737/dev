@@ -14,10 +14,10 @@ CRED_DIR=$XDG_DATA_HOME/nas
 CRED_FILE=$CRED_DIR/smb-credentials
 
 echo "
-//$HOST/vault /nas/vault cifs defaults,credentials=$CRED_FILE,uid=$(id -u)
-//$HOST/scratch /nas/scratch cifs defaults,credentials=$CRED_FILE,uid=$(id -u)
-//$HOST/media /nas/media cifs defaults,credentials=$CRED_FILE,uid=$(id -u)
-//$HOST/shared /nas/shared cifs defaults,credentials=$CRED_FILE,uid=$(id -u)
-//$HOST/games /nas/games cifs defaults,credentials=$CRED_FILE,uid=$(id -u)
-//$HOST/archives /nas/archives cifs defaults,credentials=$CRED_FILE,uid=$(id -u)
+//$HOST/vault /nas/vault cifs defaults,credentials=$CRED_FILE,uid=$UID
+//$HOST/scratch /nas/scratch cifs defaults,credentials=$CRED_FILE,uid=$UID
+//$HOST/media /nas/media cifs defaults,credentials=$CRED_FILE,uid=$UID
+//$HOST/shared /nas/shared cifs defaults,credentials=$CRED_FILE,uid=$UID
+//$HOST/games /nas/games cifs defaults,credentials=$CRED_FILE,uid=$UID
+//$HOST/archives /nas/archives cifs defaults,credentials=$CRED_FILE,uid=$UID
 "
