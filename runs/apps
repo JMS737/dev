@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-yay -S --noconfirm --needed stremio tidal-hifi obsidian
+yay -S --noconfirm --needed stremio tidal-hifi obsidian discord
 
 # terminal audio visualiser
 yay -S --noconfirm --needed cava
