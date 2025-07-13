@@ -1,3 +1,9 @@
-export XDG_MENU_PREFIX=arch-
-export QT_QPA_PLATFORMTHEME=qt5ct
-export QT_QPA_PLATFORM=wayland
+# nvidia specifc env vars
+export LIBVA_DRIVER_NAME=nvidia
+export __GLX_VENDOR_LIBRARY_NAME=nvidia
+export GBM_BACKEND=nvidia-drm
+
+# Should be set automatically, but no harm in making sure
+export XDG_SESSION_DESKTOP=Hyprland
+export XDG_SESSION_TYPE=wayland
+export XDG_CURRENT_DESKTOP=Hyprland
