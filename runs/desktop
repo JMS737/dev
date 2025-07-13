@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+# Install useful applications and tools for the desktop environment
+
+# ark = Archive management (e.g. zip files) + dolphin context menus
+
+yay -S --noconfirm --needed ark
+
+
+# Fix for dolphin's open with menu alway appearing
+# source: https://www.lorenzobettini.it/2024/05/fixing-the-empty-open-with-in-dolphin-in-hyprland/
+yay -S --noconfirm --needed archlinux-xdg-menu
+
+if [ ! -d $XDG_CONFIG_HOME/uwsm ]; then
+	mkdir $XDG_CONFIG_HOME/uwsm
+fi
+
+if [ ! -f $XDG_CONFIG_HOME/uwsm/env ]; then
+	echo 'export XDG_MENU_PREFIX=arch-' > $XDG_CONFIG_HOME/uwsm/env
+else
+	echo 'Ensure `XDG_MENU_PREIX,arch-` is being exported in your hyprland.conf (on in ~/.config/uwsm/env if launching hyprland via uwsm)'
+fi
