@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+yay -S --noconfirm --needed openssh
+
 KEYFILE=$HOME/.ssh/id_ed25519
 
 if [ -f $KEYFILE ]; then
