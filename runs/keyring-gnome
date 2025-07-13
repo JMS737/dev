@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+# This or kwallet are needed for applications like nextcloud to store
+# credentials. Note: when prompted to create a keyring, leave the password
+# blank to allow auto login. This won't store the passwords encrypted,
+# but will allow for the auto login to lock screen.
+yay -S --noconfirm --needed gnome-keyring libsecret libgnome-keyring
+
