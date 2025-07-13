@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+# https://wiki.hypr.land/Getting-Started/Installation/
+yay -S --noconfirm --needed hyprland
+yay -S --noconfirm --needed --asdeps uwsm
+
+yay -S --noconfirm --needed hyprpaper hyprpicker hyprlock hyprcursor hyprpolkitagent xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-gtk xdg-users-dirs
+
+systemctl --user enable --now waybar.service
+systemctl --user enable --now hyprpolkitagent.service
+systemctl --user enable xdg-user-dirs-update.service
+
