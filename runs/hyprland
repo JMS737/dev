@@ -4,7 +4,7 @@
 yay -S --noconfirm --needed hyprland
 yay -S --noconfirm --needed --asdeps uwsm
 
-yay -S --noconfirm --needed hyprpaper hyprpicker hyprlock hyprcursor hyprpolkitagent xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-gtk xdg-user-dirs waybar wofi thunar ghostty pipewire-pulse wl-clipboard
+yay -S --noconfirm --needed hyprpaper hyprpicker hyprlock hyprcursor hyprpolkitagent xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-gtk xdg-user-dirs waybar wofi thunar ghostty pipewire-pulse wl-clipboard dunst
 
 systemctl --user enable --now waybar.service
 systemctl --user enable --now hyprpaper.service
