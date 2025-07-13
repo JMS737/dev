@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-yay -S --noconfirm --needed stremio tidal-hifi obsidian discord
+yay -S --noconfirm --needed keepassxc nextcloud-client firefox
+yay -S --noconfirm --needed brave-bin stremio tidal-hifi obsidian discord
+
 
 # terminal audio visualiser
 yay -S --noconfirm --needed cava
