@@ -6,6 +6,10 @@
 
 yay -S --noconfirm --needed ark
 
+# Qt/KDE Theming
+
+yay -S --noconfirm --needed qt5ct qt6ct-kde kvantum
+
 
 # Fix for dolphin's open with menu alway appearing
 # source: https://www.lorenzobettini.it/2024/05/fixing-the-empty-open-with-in-dolphin-in-hyprland/
