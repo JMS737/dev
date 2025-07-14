@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+FILE=$HOME/.local/share/hypridle-inhibit
+if [ -f $FILE ]; then
+	echo "enabling hypridle"
+	rm $FILE
+else
+	echo "disabling hypridle"
+	touch $FILE
+fi
