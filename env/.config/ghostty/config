@@ -47,3 +47,4 @@ font-family = "JetBrainsMono Nerd Font Mono"
 # opacity is set in the hyprland.conf so we can use blur
 #background-opacity = 0.9
 
+cursor-invert-fg-bg = true
