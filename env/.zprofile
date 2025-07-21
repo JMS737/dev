@@ -1,5 +1,3 @@
+#!/usr/env/bin zsh
 
-path=(~/.local/scripts $path)
-export PATH
-
-export WALLPAPER_DIR=$HOME/.local/share/wallpapers
+[[ -f ~/.profile ]] && . ~/.profile
