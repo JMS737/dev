@@ -5,4 +5,5 @@ yay -S --noconfirm --needed git
 echo "Setting global git user details"
 git config --global user.email "dev@jsapsed.co.uk"
 git config --global user.name "Jeremy Sapsed"
+git config --global init.defaultBranch main
 
