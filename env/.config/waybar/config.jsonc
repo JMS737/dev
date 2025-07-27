@@ -29,14 +29,14 @@
     "format": "{icon}",
     "on-click": "activate",
     "persistent-workspaces": {
-    "*":[1,2,3,4,5,6,7,8]
+      "*":[1,2,3,4,5,6,7,8]
     },
     "format-icons": {
       "1": "󰣇",
       "2": "",
       "3": "",
       "4": "",
-      "5": "",
+      "5": "",
       "6": "",
       "7": "",
       "8": "",
@@ -44,10 +44,10 @@
     }
   },
   "custom/lock": {
-  "format": "<span color='#00FFFF'>  </span>",
-  "on-click": "hyprlock",
-  "tooltip": true,
-  "tooltip-format": "Lock"
+    "format": "<span color='#00FFFF'>  </span>",
+    "on-click": "hyprlock",
+    "tooltip": true,
+    "tooltip-format": "Lock"
   },
   "custom/reboot": {
     "format": "<span color='#FFD700'>  </span>",
@@ -77,7 +77,7 @@
     },
     "format": "<span color='#28CD41'> {icon} </span>{capacity}% ",
     "format-charging": " 󱐋{capacity}%",
-	  "interval": 1,
+    "interval": 1,
     "format-icons": ["󰂎", "󰁼", "󰁿", "󰂁", "󰁹"],
     "tooltip": true
   },
@@ -92,9 +92,9 @@
       "portable": "<span color='#00FFFF'>  </span>",
       "car": "<span color='#FFA500'>  </span>",
       "default": [
-        "<span color='#808080'>  </span>",
-        "<span color='#FFFF66'>  </span>",
-        "<span color='#00FF7F'>  </span>"
+	"<span color='#808080'>  </span>",
+	"<span color='#FFFF66'>  </span>",
+	"<span color='#00FF7F'>  </span>"
       ]
     },
     "on-click-right": "pwvucontrol",
@@ -122,7 +122,27 @@
     "timezone": "Europe/London",
     "format": "<span color='#BF00FF'>  </span>{:%H:%M, %a %d} ",
     "tooltip": true,
-    "tooltip-format": "{:L%Y/%m/%d}"
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode"          : "year",
+      "mode-mon-col"  : 3,
+      "weeks-pos"     : "right",
+      "on-scroll"     : 1,
+      "format": {
+	"months":     "<span color='#ffead3'><b>{}</b></span>",
+	"days":       "<span color='#ecc6d9'><b>{}</b></span>",
+	"weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+	"weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+	"today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+      }
+    },
+    "actions":  {
+      "on-click-right": "mode",
+      "on-scroll-up": "tz_down",
+      "on-scroll-down": "tz_up",
+      "on-scroll-up": "shift_down",
+      "on-scroll-down": "shift_up"
+    }
   },
   "tray": {
     "icon-size": 17,
@@ -132,7 +152,7 @@
     "device": "intel_backlight",
     "format": "<span color='#FFD700'>{icon}</span>{percent}% ",
     "tooltip": true,
-    "tooltip-format": "当前屏幕亮度: {percent}%",
+    "tooltip-format": "{percent}%",
     "format-icons": [
       "<span color='#696969'> 󰃞 </span>",  // 暗 - 深灰
       "<span color='#A9A9A9'> 󰃝 </span>",  // 中 - 灰
@@ -151,19 +171,19 @@
     "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
   },
   "mpris": {
-	"format": " <span color='#FF2DF1'>{player_icon}</span> {dynamic} ",
-	"format-paused": "  <span color='#FF2DF1'>{status_icon}</span>   <i>{dynamic}</i> ",
-	"interval": 1,
-	"dynamic-len": 40,
-	"player-icons": {
-		"default": "▶",
-		"mpv": "🎵",
-		"tidal-hifi": "",
-		"brave" : ""
-	},
-	"status-icons": {
-		"paused": "⏸"
-	}
+    "format": " <span color='#FF2DF1'>{player_icon}</span> {dynamic} ",
+    "format-paused": "  <span color='#FF2DF1'>{status_icon}</span>   <i>{dynamic}</i> ",
+    "interval": 1,
+    "dynamic-len": 40,
+    "player-icons": {
+      "default": "▶",
+      "mpv": "",
+      "tidal-hifi": "",
+      "brave" : ""
+    },
+    "status-icons": {
+      "paused": "⏸"
+    }
 	// "ignored-players": ["firefox"]
   }
 }
