@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-yay -S --noconfirm --needed btop ghostty pwvucontrol rose-pine-hyprcursor unzip ttf-jetbrains-mono-nerd ttf-nerd-fonts-symbols ttf-font-awesome samba
+yay -S --noconfirm --needed btop ghostty pwvucontrol rose-pine-hyprcursor unzip ttf-jetbrains-mono-nerd ttf-nerd-fonts-symbols woff2-font-awesome samba
 
 # allows you to send desktop notifications via dunst from the cli
 yay -S --noconfirm --needed libnotify
