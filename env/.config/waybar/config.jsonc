@@ -174,7 +174,7 @@
     "format": " <span color='#FF2DF1'>{player_icon}</span> {dynamic} ",
     "format-paused": "  <span color='#FF2DF1'>{status_icon}</span>   <i>{dynamic}</i> ",
     "interval": 1,
-    "dynamic-len": 40,
+    "dynamic-len": 50,
     "player-icons": {
       "default": "▶",
       "mpv": "",
