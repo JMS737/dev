@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+sudo pacman -Syu tailscale
+sudo systemctl enable --now tailscaled
+
+echo 'A reboot may be required'
+
+sudo tailscale up
