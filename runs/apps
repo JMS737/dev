@@ -10,3 +10,7 @@ yay -S --noconfirm --needed vlc vlc-plugins-all
 
 # terminal audio visualiser
 yay -S --noconfirm --needed cava
+
+# Music Streaming Service
+# yay -S --noconfirm --needed tidal-hifi
+yay -S --noconfirm --needed spotify-launcher
