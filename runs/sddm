@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+yay -Syu --noconfirm --needed sddm sddm-astronaut-theme
+
+

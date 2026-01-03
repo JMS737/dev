@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+yay -Syu --noconfirm --needed kwallet kwallet-pam
+
+echo "Make sure to enable the two kwallet lines in the /etc/pam.d/sddm and /etc/pam.d/sddm-autologin files"
