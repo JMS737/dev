@@ -1,0 +1,629 @@
+[33mcommit f0aa8895f73c63624dcf6a0550a54cd182d08921[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Mon Jan 5 22:05:41 2026 +0000
+
+    Switch to firefox
+
+[33mcommit c07451b6ea7bd9229a4b533c50dd625d57f93377[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sun Jan 4 15:27:56 2026 +0000
+
+    Update hyprpaper config to remove splash
+
+[33mcommit 880661869fd398cf95e9da34ef10b120f2d29748[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sun Jan 4 13:08:33 2026 +0000
+
+    Fix for hyprpaper after v0.8.0 rewrite
+
+[33mcommit 0aaa3f60739fc4c32078b718a640e55c05ffe9c4[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sat Jan 3 10:47:49 2026 +0000
+
+    Make tailscale run script executable
+
+[33mcommit 7f0cf506864a1b2a7bb318a8c514b80a57b52cac[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sat Jan 3 10:47:11 2026 +0000
+
+    Add run scripts for SDDM and kwallet
+
+[33mcommit f3704a8a2bcf9fafa079ba92a43583022645eeea[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sat Jan 3 08:45:01 2026 +0000
+
+    Set scaling to 2 on LG C4
+
+[33mcommit ad2239d53e3bfccb9af0530bbd1b170070b46a2b[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sat Jan 3 08:38:52 2026 +0000
+
+    update blur passes on lock screen
+
+[33mcommit 9e91853e38d2b08fa253395867eaab98af6bf87e[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Thu Jan 1 10:45:43 2026 +0000
+
+    update hyprland workspace rules to v0.53.0
+
+[33mcommit 8e3a308737b994fd00f4fd576c319939d52fdd08[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Mon Nov 17 21:12:50 2025 +0000
+
+    Add laptop script for controlling brightness
+
+[33mcommit 62fc4685b3f3b526fe1328728cbc8ec17e51d1cb[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Mon Nov 17 21:12:11 2025 +0000
+
+    switch music app to spotify
+
+[33mcommit 6182a54dbfef48d70e60677b069f8d1d47792144[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Mon Nov 17 21:11:48 2025 +0000
+
+    Update help for keyring issues
+
+[33mcommit f65a759f8b3d0f56dc18eff265e1cf6e360f2503[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Wed Nov 12 17:28:54 2025 +0000
+
+    Update ghostty theme
+
+[33mcommit 81f7ef6c20314df66beaf3f40d9d225360148013[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sun Nov 2 10:35:29 2025 +0000
+
+    change from tidal to spotify + add monitor config for LG C4 OLED
+
+[33mcommit 87161b9260be3342c60b45b0b190a561f68ca47d[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Fri Aug 15 08:39:34 2025 +0100
+
+    add tailscale runbook
+
+[33mcommit 01bd86eb43603992a2dc3dcb0e2daad094e63588[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Mon Aug 11 17:53:51 2025 +0100
+
+    Set all workspaces to use ultrawide as the primary monitor to avoid having to disable the AV receiver
+
+[33mcommit fbfe4fba5639f8c67358d1dff01e6ae3df6536ee[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sat Aug 2 14:13:35 2025 +0100
+
+    Add udisks2 and udiskie for automatic mounting of usb drives
+
+[33mcommit 4b4f56f77b2de00621c584b1561da9839a342a9f[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sun Jul 27 22:28:08 2025 +0100
+
+    Increase size of music playback
+
+[33mcommit 1f54ec26e2992ca4b8247bbd4754843536f83080[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sun Jul 27 22:21:25 2025 +0100
+
+    Updated font awesome to the newer woff2 file types
+
+[33mcommit 48df13ae7f8ca908713bd58b07428f87a4ee1628[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sun Jul 27 22:20:26 2025 +0100
+
+    Updated fonts to work with woff2 fonts + added calendar
+
+[33mcommit 4310a11145148454facc1648c95c52162c969797[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sun Jul 27 21:26:12 2025 +0100
+
+    Freeze screen on screen capture
+
+[33mcommit 020856ffe0a5b75e20679bb6a00c6c5489d59061[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sun Jul 27 21:18:14 2025 +0100
+
+    Add hyprshot and keybindings for region and window screen captures
+
+[33mcommit cdc29f83bc411319eeed1bed109e70881a69b6fc[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Mon Jul 21 22:54:18 2025 +0100
+
+    Fix ghostty cursor visibility
+
+[33mcommit 2a54dd11571cca8caf94c412c03860799918da78[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Mon Jul 21 21:51:27 2025 +0100
+
+    Add bash and zsh config files
+
+[33mcommit 726e1842b8cf3e9c891b53f51b38b27e09a48d59[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Mon Jul 21 21:47:00 2025 +0100
+
+    Add kickstarter neovim install
+
+[33mcommit 02be3778b149a002ca5502634e7e0ab0de52c1a3[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Mon Jul 21 21:43:38 2025 +0100
+
+    Set default git branch to main
+
+[33mcommit 28843fd9fea1a58e13624b2eaf856e61286dc55a[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sat Jul 19 09:33:24 2025 +0100
+
+    Updated hypr configs
+
+[33mcommit 812e6919c85e5878413d4630143a5f690b50432d[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Tue Jul 15 21:27:08 2025 +0100
+
+    Add hyprsunset service
+
+[33mcommit 264303a96cb4446ccf30372885c1d0b8bd09d000[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Mon Jul 14 22:52:19 2025 +0100
+
+    Add hypridle, config and scripts for inhibiting screen lock / sleep
+
+[33mcommit fc3f04143d3b1b2bd9c8ecf6375da2411b395b54[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Mon Jul 14 18:20:13 2025 +0100
+
+    Add VLC and required plugins
+
+[33mcommit 968b4ea4f08969a5c220ce76b058de2e1397beb5[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Mon Jul 14 16:46:34 2025 +0100
+
+    Add keepassxc to the the autostart section of hyprland.conf
+
+[33mcommit ce16893ce9872ecd225b245e4780cebc152ccf59[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sun Jul 13 22:54:23 2025 +0100
+
+    Removed redundant environment variables, these will be set by uwsm
+
+[33mcommit 7946abef49a036812bf85ff8e07d218d7f4f827f[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sun Jul 13 22:35:27 2025 +0100
+
+    Add the gnome keyring
+
+[33mcommit 5288dd76a525e8812dbe107c8fc1777dd4553a8f[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sun Jul 13 22:35:03 2025 +0100
+
+    Add dunst
+
+[33mcommit b3360e874f202535c777255da449e37fae8b547a[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sun Jul 13 22:34:32 2025 +0100
+
+    Update environment variables
+
+[33mcommit d30d5bbfe18839c833a7d8c0c38f049f3a01fd2a[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sun Jul 13 21:46:13 2025 +0100
+
+    Change default file browswer to thunar, enable auto lock and update keepassxc window rule
+
+[33mcommit 36f4fe726814eb20116f3836a125728956816e17[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sun Jul 13 21:43:36 2025 +0100
+
+    Add keepassxc, nextcloud-client and firefox/brave to apps
+
+[33mcommit 8c2f1a8f8dd6507188081c90eb183491d2feb087[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sun Jul 13 21:43:05 2025 +0100
+
+    Add clipboard, pipewire-pulse (waybar dependency) and hyprpaper service enable
+
+[33mcommit d00e3ceff9e114789a584b29fb40906d7bb1fbc5[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sun Jul 13 21:42:10 2025 +0100
+
+    Add samba
+
+[33mcommit b7e6e57ff73759a0922536453a016d7ea24b8b48[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sun Jul 13 18:45:13 2025 +0100
+
+    Move desktop runbook to Qt explicit runbook
+
+[33mcommit aef20dedda5b672d205c98fdb3a64763f446601f[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sun Jul 13 18:44:40 2025 +0100
+
+    Add missing waybar package
+
+[33mcommit f558742e7610dc594caf98ebb5b0f7175d6dc114[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sun Jul 13 18:37:09 2025 +0100
+
+    Move fonts to lib runbook
+
+[33mcommit a9257be63dc8d7b862d06284078b0d72b9d265fe[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sun Jul 13 18:31:15 2025 +0100
+
+    Add .profile for starting hyprland session
+
+[33mcommit 1368c1009fd24e3f5f363a03bc132744667a968b[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sun Jul 13 18:23:10 2025 +0100
+
+    Update hyprland.conf with settings from laptop
+
+[33mcommit a51b5a4172ac880154654ddc768b6d177c73fe95[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sun Jul 13 18:14:02 2025 +0100
+
+    Add openssh installation to ssh runbook
+
+[33mcommit 8bc57a15db210f7e68a4fb544ad46e32f7d77b7d[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sun Jul 13 17:54:45 2025 +0100
+
+    Enable natural scrolling on touchpad
+
+[33mcommit 29c1abb19249ecb7cda2f02ce4b3a18959220635[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sun Jul 13 17:54:10 2025 +0100
+
+    Create a new runbook for hyprland install
+
+[33mcommit c273baf42a54ff604b6cfe6cf78079d5169da29c[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sun Jul 13 11:11:55 2025 +0100
+
+    Add theming and additional hyprland environment variables
+
+[33mcommit ca9fd558d307719eacf317a4b8a6655c13d4c770[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sun Jul 13 10:21:20 2025 +0100
+
+    Add desktop runbook for setting up archive tools in dolphin, and fix the open with association menu in dolphin
+
+[33mcommit 54caafbacb1cb90e0cb83182fc6205e67d2aaf70[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sat Jul 12 22:01:13 2025 +0100
+
+    Update wallpaper theme config directory to be in /home/jeremy/.config
+
+[33mcommit 21beb4a8d0914fce065f2af157d91e0079c1e0a0[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sat Jul 12 21:50:27 2025 +0100
+
+    Update readme with possible fix for bluetooth controller issues
+
+[33mcommit f16c830a6cee2cb8fd60a516f771755660d8228b[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sat Jul 12 21:12:38 2025 +0100
+
+    Remove full path from wallpaper commands in hyprland.conf now that they have been added to the path
+
+[33mcommit 318c32141d2c008e507f9d0bcf5e424389c3a80b[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sat Jul 12 20:42:16 2025 +0100
+
+    Add all item to wallpaper theme selector and ignore on esc
+
+[33mcommit 05a6d9bac6201687c8f76aef6924f2d8373319db[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sat Jul 12 20:18:13 2025 +0100
+
+    Set audio controls to appear as a floating window
+
+[33mcommit e6766e65cdeacae2ef347b5f779cdc7f3cda9a51[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sat Jul 12 20:17:16 2025 +0100
+
+    Add cava config
+
+[33mcommit b5e3c48db563996dc63d97edc14141ab267ae754[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sat Jul 12 20:07:19 2025 +0100
+
+    Update waybar workspaces to include notes workspace
+
+[33mcommit 4ebec068c6fdebeaec7ec399c773e4658603a263[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sat Jul 12 20:02:27 2025 +0100
+
+    display current theme in prompt
+
+[33mcommit 94cf9b7b89d86fa668cabb7c96fd12cdc5269e46[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sat Jul 12 19:52:59 2025 +0100
+
+    Use /home/jeremy/.local/share explicitly to match .zprofile
+
+[33mcommit 5f73d0869e99bed9e550c3330dadb7056d633f9e[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sat Jul 12 19:52:08 2025 +0100
+
+    Use /home/jeremy/.local/share explicitly as XDG_DATA_HOME doesn't appear to be set at the point the .zprofile is run
+
+[33mcommit 3555526901967c56cef663dd67583ecdb0af8f61[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sat Jul 12 19:49:51 2025 +0100
+
+    Use blank as Y for nas dns setup
+
+[33mcommit 52be4605ffcedc9f483a2327e6b3f851a7daf809[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sat Jul 12 19:31:22 2025 +0100
+
+    use 1000 rather than 1000 command
+
+[33mcommit 66e81a3d0dff62841dc82be89580fe295c14e03e[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sat Jul 12 19:28:31 2025 +0100
+
+    Add scripts for setting up network shares in fstab and setting dns
+
+[33mcommit a7eb6ab71b454b31bf7398d790d98f11a750d101[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sat Jul 12 18:45:24 2025 +0100
+
+    move wallpapers dir to XDG_DATA_HOME
+
+[33mcommit 4c6ba9e83eaf275f0c67fa00ec9b52354875856c[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sat Jul 12 18:42:37 2025 +0100
+
+    update hyprland blurring and add wallpaper theme bindings
+
+[33mcommit c13da2ad754267b8540d331f589517efabdf357a[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sat Jul 12 18:40:30 2025 +0100
+
+    zsh + discord runbooks
+
+[33mcommit 62954400855ac018b6a85a33374579a1d94090e1[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sat Jul 12 18:39:19 2025 +0100
+
+    add scripts for managing wallpaper themes based on the directories in the /home/jeremy/wallpapers directory
+
+[33mcommit e24e0c12475b6ef2e17b4ef2c160077a28991d8b[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Fri Jul 11 21:36:23 2025 +0100
+
+    add audio visualiser
+
+[33mcommit 8e3c31df6cc97ee62b5dbaa91abbd7130322f726[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Tue Jul 8 18:47:45 2025 +0100
+
+    Add obsidian
+
+[33mcommit e2bd9e9fa0de1d4869abc2d3a8cadb32bf77c4cd[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Tue Jul 8 17:21:49 2025 +0100
+
+    Fix typo in readme
+
+[33mcommit e2346ebd1a483b79ff965de5d5e1c42ce377b0c5[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Tue Jul 8 17:20:37 2025 +0100
+
+    Add readme file for env directory
+
+[33mcommit 7989e58f51f7f4fb6bf54ae9dfeae33f92c1a52c[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Mon Jul 7 22:02:37 2025 +0100
+
+    Add comment on how to get information about windows to set windowrules
+
+[33mcommit 0527b4fa083ecc7a94056b3547c543101f8608e0[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Mon Jul 7 21:56:26 2025 +0100
+
+    Set ghostty opacity and blur in hyprland.conf
+
+[33mcommit cdfe371430da05a4b3a6ae0638162b6bf2273f43[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Mon Jul 7 18:00:43 2025 +0100
+
+    Add missing shebang to restart waybar cmd
+
+[33mcommit c796ccbc447c8feed83cb2c5a45a09236fb9ca6c[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Mon Jul 7 17:59:37 2025 +0100
+
+    Add cmds directory for storing helpful commands to restart services, etc.
+
+[33mcommit f37fe05a2df01098de8c6acd1013cc0e863f796f[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Mon Jul 7 17:57:53 2025 +0100
+
+    Removed day from waybar clock tooltip
+
+[33mcommit ac920a039ce21be6ae608a51ebe85d3ae674c4ff[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Mon Jul 7 17:14:45 2025 +0100
+
+    Add background-opacity to ghostty
+
+[33mcommit 1302264a97b6d84db0fee9a11ce7839841a0343e[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sun Jul 6 23:24:33 2025 +0100
+
+    Add ghostty terminal
+
+[33mcommit 5b9ce8d8b66f14039c563135121252f3c02db694[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sun Jul 6 22:32:04 2025 +0100
+
+    Increase size of dunst notifications
+
+[33mcommit e39534086dc4bcb787822378919497fb7de85d88[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sun Jul 6 22:16:34 2025 +0100
+
+    Add steam install
+
+[33mcommit c1da49c2bc4218b884ab4bcc9b3905bf5b890ad9[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sun Jul 6 21:57:45 2025 +0100
+
+    Move cmds to env/.local/scripts and update config accordinly
+
+[33mcommit b4f1dd49de26559c9db4a22a7d021287f0daf62b[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sun Jul 6 21:47:02 2025 +0100
+
+    Add tidal hifi + audio player to waybar
+
+[33mcommit 07d7185ecd038316df2ee5d665b5d3dd88e9b08b[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sun Jul 6 20:40:24 2025 +0100
+
+    Add tidal as a PWA
+
+[33mcommit eeb855f28ce60c358126e93fef4098eea9712e74[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sun Jul 6 20:08:47 2025 +0100
+
+    Update time format to include day
+
+[33mcommit 327c92ee35b631d42a9eb4ca9c2752e5f8c15797[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sun Jul 6 19:55:47 2025 +0100
+
+    Update cursors
+
+[33mcommit d839b41cedca944c7f7a7a9804f2ffbdd57c440a[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sun Jul 6 19:51:29 2025 +0100
+
+    Add cursors
+
+[33mcommit f66ccc9c76a7750e3cef84d2138b351240c8bb26[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sun Jul 6 19:27:49 2025 +0100
+
+    Add reference to SDDM themes
+
+[33mcommit 0e0231efad9f4f5d982ae7e07b40b8c9278898a3[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sun Jul 6 19:25:25 2025 +0100
+
+    Add hyprlock
+
+[33mcommit f6e97bbd92f4c4433698af8a720304a68710007c[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sun Jul 6 14:29:54 2025 +0100
+
+    Remove conflict with window swap and layout split keys
+
+[33mcommit 24719e442391e1589637ae9764e6500a8bd356d6[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sun Jul 6 14:10:32 2025 +0100
+
+    Set text colour in waybar tray menus to black
+
+[33mcommit 924a95135b523d39568757b69da39ad45d7029f0[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sun Jul 6 12:35:02 2025 +0100
+
+    Add dusnt configuration
+
+[33mcommit a0616aa1dd659cff48245f25d3cc81d96f3343dd[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sun Jul 6 11:35:06 2025 +0100
+
+    Add hyprpaper and hyprpicker
+
+[33mcommit e5eda735e59af75c60990bd3a949b9ccb4c081e4[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sun Jul 6 09:46:52 2025 +0100
+
+    Add hyprland config
+
+[33mcommit 694550007a21164b8acef55dadc587b84a5e2e2a[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sun Jul 6 09:17:08 2025 +0100
+
+    Updated waybar workspaces
+
+[33mcommit f44773ab4d3c8a4dca175a97723479344b1b8b82[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sun Jul 6 09:05:08 2025 +0100
+
+    Updated waybar workspaces
+
+[33mcommit c13e40f6a7ded559b60097805a022936813c1da1[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sat Jul 5 21:59:25 2025 +0100
+
+    Add readme
+
+[33mcommit 33f7fa4d33d5bc72c44c1ab97943c01592023fd4[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sat Jul 5 21:52:36 2025 +0100
+
+    Add bluetooth controls
+
+[33mcommit f55e9a78a8388d649a48ddc13ab509daa4e17f35[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sat Jul 5 21:48:43 2025 +0100
+
+    Add waybar install and config
+
+[33mcommit 505e46d4b91f165a2a3d5ece7539d1528a73153b[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sat Jul 5 20:03:27 2025 +0100
+
+    Hide disable additional wofi actions to hide the arrows
+
+[33mcommit 7186628a591a00f5d6615bb05fce861e60dcd096[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sat Jul 5 19:40:21 2025 +0100
+
+    Add wofi styles
+
+[33mcommit 4db3bc89d3b36541a711d2498dcb4c3d99048b27[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sat Jul 5 19:26:30 2025 +0100
+
+    Move btop to lib playbook
+
+[33mcommit 2cb48e2f4964737ee15b8d4ab9445ac7ada3b2a2[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sat Jul 5 19:25:49 2025 +0100
+
+    Add lib playbook for adding basic tools and libraries
+
+[33mcommit 2bd7ba3f2b5c8f2d7d2ab6918bff5d9d83ad018d[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sat Jul 5 19:23:53 2025 +0100
+
+    Add apps playbook for btop and stremio
+
+[33mcommit 19ae5ec9be97c1ad63759ecf209ddea6839cee73[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sat Jul 5 19:01:38 2025 +0100
+
+    Added Alacritty configuration
+
+[33mcommit 6719d0c6578c00ce13802e5edccf23f01ea4bac0[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sat Jul 5 19:01:27 2025 +0100
+
+    Updated ssh playbook to check for existing SSH keys
+
+[33mcommit d040cb05d9f2f57dffc4ef486b21caa15683037d[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sat Jul 5 18:51:54 2025 +0100
+
+    Add ssh playbook for generating ssh keys
+
+[33mcommit 5260a96961aa28a7b5f0a0f5b8edaac4bfddfc43[m
+Author: Jeremy Sapsed <dev@jsapsed.co.uk>
+Date:   Sat Jul 5 18:38:21 2025 +0100
+
+    Init
