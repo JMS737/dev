@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 yay -S --noconfirm --needed keepassxc nextcloud-client firefox
-yay -S --noconfirm --needed brave-bin stremio tidal-hifi obsidian discord
+yay -S --noconfirm --needed stremio obsidian discord
 
 # As of July 2025 vlc has split out some of the plugins from the main package?
 # In any case, if you find you run into codec issues, try installing the vlc-plugins-all package, that seems to resolve it.
