@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+# A TUI for burning ISOs and creating live USBs
+
+pacman -S caligula
