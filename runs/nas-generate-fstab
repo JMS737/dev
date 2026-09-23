@@ -2,6 +2,12 @@
 
 if [ ! -d /nas ]; then
   mkdir /nas
+  mkdir /nas/vault
+  mkdir /nas/scratch
+  mkdir /nas/media
+  mkdir /nas/shared
+  mkdir /nas/games
+  mkdir /nas/archives
 fi
 
 if [ -z $1 ]; then
