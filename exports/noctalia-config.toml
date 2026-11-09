@@ -1,0 +1,293 @@
+[bar.default]
+center = [ "date", "spacer_2", "clock", "spacer_3", "weather" ]
+end = [ "tray", "network", "bluetooth", "volume", "brightness", "battery", "notifications", "control-center", "session" ]
+margin_ends = 0
+radius_top_left = 0
+radius_top_right = 0
+start = [ "launcher", "group:g1", "workspaces", "media" ]
+
+    [[bar.default.capsule_group]]
+    accordion = true
+    accordion_direction = "end"
+    border_width = 1.0
+    enabled = true
+    fill = "surface_container"
+    id = "g1"
+    members = [ "caffeine", "clipboard", "wallpaper" ]
+    opacity = 1.0
+    padding = 6.0
+
+[calendar]
+enabled = true
+
+    [calendar.account.home_nextcloud]
+    name = "Nextcloud"
+    provider = "custom"
+    server_url = "https://cloud.home.jsapsed.co.uk/remote.php/dav"
+    type = "caldav"
+    username = "Jeremy"
+
+[desktop_widgets]
+schema_version = 2
+widget_order = []
+
+    [desktop_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [desktop_widgets.widget]
+
+[location]
+address = "Colchester"
+
+[lockscreen]
+transition = []
+
+[lockscreen_widgets]
+enabled = false
+schema_version = 2
+widget_order = [
+    "lockscreen-login-box@TV",
+    "lockscreen-login-box@DP-3",
+    "lockscreen-login-box@DP-2",
+    "lockscreen-login-box@DP-1",
+    "lockscreen-login-box@eDP-1",
+    "lockscreen-login-box@FALLBACK"
+]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-1"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 1720.0
+    cy = 1258.0003662109375
+    output = "DP-1"
+    placement_height = 1440.0
+    placement_width = 3440.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-1".settings]
+        background_color = "surface_container"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_password_reveal = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-2"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 1280.0
+    cy = 1258.0
+    output = "DP-2"
+    placement_height = 1440.0
+    placement_width = 2560.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-2".settings]
+        background_color = "surface_container"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_password_reveal = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-3"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 1024.0
+    cy = 1915.7333984375
+    output = "DP-3"
+    placement_height = 2304.0
+    placement_width = 2048.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-3".settings]
+        background_color = "surface_container"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_password_reveal = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@FALLBACK"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 960.0
+    cy = 898.0
+    output = "FALLBACK"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@FALLBACK".settings]
+        background_color = "surface_container"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_password_reveal = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@TV"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 1024.0
+    cy = 763.73388671875
+    output = "TV"
+    placement_height = 1152.0
+    placement_width = 2048.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@TV".settings]
+        background_color = "surface_container"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_password_reveal = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 720.0
+    cy = 778.0
+    output = "eDP-1"
+    placement_height = 960.0
+    placement_width = 1440.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
+        background_color = "surface_container"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_password_reveal = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+[plugins]
+enabled = []
+
+[shell]
+polkit_agent = true
+
+    [shell.screenshot]
+    directory = "/home/jeremy/Pictures"
+
+[theme]
+builtin = "Rosé Pine"
+community_palette = "Oxocarbon"
+source = "builtin"
+wallpaper_scheme = "m3-content"
+
+[wallpaper]
+directory = "/home/jeremy/Pictures/Wallpapers/main"
+transition = [ "honeycomb" ]
+
+    [wallpaper.automation]
+    enabled = true
+
+    [wallpaper.default]
+    path = "/home/jeremy/Pictures/Wallpapers/main/abstract/solid_abstract_colors-HD.jpg"
+
+    [wallpaper.last]
+    path = "/home/jeremy/Pictures/Wallpapers/main/abstract/solid_abstract_colors-HD.jpg"
+
+    [wallpaper.monitors.DP-1]
+    path = "/home/jeremy/Pictures/Wallpapers/main/abstract/solid_abstract_colors-HD.jpg"
+
+    [wallpaper.monitors.DP-2]
+    path = "/home/jeremy/Pictures/Wallpapers/main/nature - stylised/Tower-Night.png"
+
+    [wallpaper.monitors.eDP-1]
+    path = "/home/jeremy/Pictures/Wallpapers/main/abstract/solid_abstract_colors-HD.jpg"
+
+[widget.clock]
+anchor = true
+
+[widget.date]
+format = "{:%a %d}"
+
+[widget.network]
+show_label = false
+
+[widget.session]
+enabled = false
+
+[widget.spacer_2]
+length = 10
+type = "spacer"
+
+[widget.spacer_3]
+length = 10
+type = "spacer"
+
+[widget.tray]
+drawer = true
+
+[widget.weather]
+show_condition = false
