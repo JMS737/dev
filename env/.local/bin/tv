@@ -1,0 +1,315 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+# Configuration
+OUTPUT="TV"
+LAPTOP_OUTPUT="eDP-1"
+
+DEFAULT_RESOLUTION="1440p"
+DEFAULT_REFRESH_RATE="60"
+DEFAULT_SCALE="1"
+
+usage() {
+  cat <<EOF
+Usage: $0 <command> [resolution] [refresh_rate] [scale]
+
+Commands:
+  up       Create or update the virtual TV
+  set      Update or create the virtual TV
+  down     Remove the virtual TV and reset laptop position
+  help     Display this help message
+
+Resolutions:
+  1080p    1920x1080
+  1440p    2560x1440 (default)
+  4k       3840x2160
+
+Defaults:
+  Refresh: ${DEFAULT_REFRESH_RATE}Hz
+  Scale:   ${DEFAULT_SCALE}
+
+Examples:
+  $0 up
+  $0 up 4k
+  $0 up 1080p 60
+  $0 set 1440p 120 1.5
+  $0 set 4k 60 2
+  $0 down
+EOF
+}
+
+# Check if the virtual TV exists
+tv_exists() {
+  hyprctl monitors -j | jq -e \
+    --arg name "$OUTPUT" \
+    'any(.[]; .name == $name)' >/dev/null
+}
+
+# Get the laptop's current monitor information
+get_laptop_info() {
+  local monitors
+
+  monitors=$(hyprctl monitors -j)
+
+  LAPTOP_INFO=$(jq -e \
+    --arg name "$LAPTOP_OUTPUT" \
+    '.[] | select(.name == $name)' \
+    <<<"$monitors") || {
+    echo "Error: Laptop display $LAPTOP_OUTPUT not found"
+    return 1
+  }
+
+  LAPTOP_WIDTH=$(jq -r '.width' <<<"$LAPTOP_INFO")
+  LAPTOP_HEIGHT=$(jq -r '.height' <<<"$LAPTOP_INFO")
+  LAPTOP_REFRESH=$(jq -r '.refreshRate' <<<"$LAPTOP_INFO")
+  LAPTOP_SCALE=$(jq -r '.scale' <<<"$LAPTOP_INFO")
+
+  LAPTOP_MODE="${LAPTOP_WIDTH}x${LAPTOP_HEIGHT}@${LAPTOP_REFRESH}"
+
+  LAPTOP_LOGICAL_WIDTH=$(awk \
+    -v w="$LAPTOP_WIDTH" \
+    -v s="$LAPTOP_SCALE" \
+    'BEGIN { printf "%.0f", w / s }')
+}
+
+# Apply monitor configuration using Hyprland Lua API
+set_monitor() {
+  local name="$1"
+  local mode="$2"
+  local position="$3"
+  local scale="$4"
+
+  hyprctl eval "hl.monitor({
+        output = \"$name\",
+        mode = \"$mode\",
+        position = \"$position\",
+        scale = $scale
+    })"
+}
+
+# Calculate centered layout
+calculate_layout() {
+  local physical_tv_width="${DIMENSIONS%x*}"
+  local physical_tv_height="${DIMENSIONS#*x}"
+
+  # TV logical dimensions, accounting for its scale
+  TV_WIDTH=$(awk \
+    -v w="$physical_tv_width" \
+    -v s="$SCALE" \
+    'BEGIN { printf "%.0f", w / s }')
+
+  TV_HEIGHT=$(awk \
+    -v h="$physical_tv_height" \
+    -v s="$SCALE" \
+    'BEGIN { printf "%.0f", h / s }')
+
+  # Horizontally center the smaller monitor
+  if ((TV_WIDTH >= LAPTOP_LOGICAL_WIDTH)); then
+    TV_X=0
+    LAPTOP_X=$(((TV_WIDTH - LAPTOP_LOGICAL_WIDTH) / 2))
+  else
+    LAPTOP_X=0
+    TV_X=$(((LAPTOP_LOGICAL_WIDTH - TV_WIDTH) / 2))
+  fi
+
+  # TV above laptop, without negative coordinates
+  TV_Y=0
+  LAPTOP_Y="$TV_HEIGHT"
+}
+
+configure_tv() {
+  local tv_mode="${DIMENSIONS}@${REFRESH_RATE}"
+  local tv_position="auto-center-up"
+
+  echo "Configuring display layout:"
+  echo "  TV:     $tv_mode, scale $SCALE, at $tv_position"
+
+  set_monitor \
+    "$OUTPUT" \
+    "$tv_mode" \
+    "$tv_position" \
+    "$SCALE"
+
+  echo "Display layout configured successfully."
+}
+
+configure_tv_and_position() {
+  get_laptop_info
+  calculate_layout
+
+  local tv_mode="${DIMENSIONS}@${REFRESH_RATE}"
+  local tv_position="${TV_X}x${TV_Y}"
+  local laptop_position="${LAPTOP_X}x${LAPTOP_Y}"
+
+  echo "Configuring display layout:"
+  echo "  TV:     $tv_mode, scale $SCALE, at $tv_position"
+  echo "  Laptop: $LAPTOP_MODE, scale $LAPTOP_SCALE, at $laptop_position"
+
+  # Step 1: Park TV far away to avoid temporary overlap
+  echo "Temporarily moving TV out of the way..."
+
+  set_monitor \
+    "$OUTPUT" \
+    "$tv_mode" \
+    "100000x0" \
+    "$SCALE"
+
+  # Step 2: Position laptop below the TV
+  echo "Positioning laptop..."
+
+  set_monitor \
+    "$LAPTOP_OUTPUT" \
+    "$LAPTOP_MODE" \
+    "$laptop_position" \
+    "$LAPTOP_SCALE"
+
+  # Step 3: Position TV centered above laptop
+  echo "Centering TV above laptop..."
+
+  set_monitor \
+    "$OUTPUT" \
+    "$tv_mode" \
+    "$tv_position" \
+    "$SCALE"
+
+  echo "Display layout configured successfully."
+}
+
+# Configure both monitors
+configure_tv_old() {
+  get_laptop_info
+  calculate_layout
+
+  echo "Configuring display layout:"
+  echo ""
+  echo "  TV ($OUTPUT):"
+  echo "    Resolution: ${DIMENSIONS}@${REFRESH_RATE}Hz"
+  echo "    Scale:      $SCALE"
+  echo "    Position:   ${TV_X}x${TV_Y}"
+  echo ""
+  echo "  Laptop ($LAPTOP_OUTPUT):"
+  echo "    Resolution: $LAPTOP_MODE"
+  echo "    Scale:      $LAPTOP_SCALE"
+  echo "    Position:   ${LAPTOP_X}x${LAPTOP_Y}"
+  echo ""
+
+  # Move laptop beneath the TV
+  set_monitor \
+    "$LAPTOP_OUTPUT" \
+    "$LAPTOP_MODE" \
+    "${LAPTOP_X}x${LAPTOP_Y}" \
+    "$LAPTOP_SCALE"
+
+  # Configure TV above the laptop
+  set_monitor \
+    "$OUTPUT" \
+    "${DIMENSIONS}@${REFRESH_RATE}" \
+    "${TV_X}x${TV_Y}" \
+    "$SCALE"
+
+  echo "Display layout configured successfully."
+}
+
+# Create or update the TV
+up_tv() {
+  # Validate laptop before creating an output
+  get_laptop_info
+
+  if tv_exists; then
+    echo "$OUTPUT already exists. Updating..."
+  else
+    echo "Creating headless display $OUTPUT..."
+    hyprctl output create headless "$OUTPUT"
+  fi
+
+  configure_tv
+  echo "$OUTPUT is ready."
+}
+
+# Remove the TV and restore laptop position
+down_tv() {
+  if tv_exists; then
+    echo "Removing headless display $OUTPUT..."
+    hyprctl output remove "$OUTPUT"
+    echo "$OUTPUT removed."
+  else
+    echo "$OUTPUT does not exist."
+  fi
+
+  # Restore laptop to its original layout origin
+  get_laptop_info
+
+  echo "Restoring $LAPTOP_OUTPUT to 0x0..."
+
+  set_monitor \
+    "$LAPTOP_OUTPUT" \
+    "$LAPTOP_MODE" \
+    "0x0" \
+    "$LAPTOP_SCALE"
+
+  echo "Laptop display restored."
+}
+
+# Main
+COMMAND="${1:-}"
+RESOLUTION="${2:-$DEFAULT_RESOLUTION}"
+REFRESH_RATE="${3:-$DEFAULT_REFRESH_RATE}"
+SCALE="${4:-$DEFAULT_SCALE}"
+
+case "$COMMAND" in
+down)
+  systemctl --user stop tv-lid-inhibit.service
+  down_tv
+  exit 0
+  ;;
+up | set)
+  systemctl --user start tv-lid-inhibit.service
+  ;;
+help | -h | --help)
+  usage
+  exit 0
+  ;;
+*)
+  echo "Error: Invalid command '$COMMAND'"
+  usage
+  exit 1
+  ;;
+esac
+
+# Resolve resolution
+case "$RESOLUTION" in
+1080p | 1080 | hd)
+  DIMENSIONS="1920x1080"
+  SCALE="1"
+  ;;
+1440p | 1440)
+  DIMENSIONS="2560x1440"
+  SCALE="1.25"
+  ;;
+4k | 2160p | 2160 | uhd)
+  DIMENSIONS="3840x2160"
+  SCALE="2"
+  ;;
+*)
+  echo "Error: Unsupported resolution '$RESOLUTION'"
+  exit 1
+  ;;
+esac
+
+# Validate refresh rate
+if ! [[ "$REFRESH_RATE" =~ ^[0-9]+$ ]] ||
+  ((10#$REFRESH_RATE == 0)); then
+  echo "Error: Refresh rate must be a positive integer"
+  exit 1
+fi
+
+# Validate scale
+if ! [[ "$SCALE" =~ ^[0-9]+([.][0-9]+)?$ ]] ||
+  ! awk -v s="$SCALE" 'BEGIN { exit !(s > 0) }'; then
+  echo "Error: Scale must be a positive number"
+  exit 1
+fi
+
+# Create or update the TV
+up_tv

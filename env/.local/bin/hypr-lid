@@ -1,0 +1,47 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+INTERNAL="eDP-1"
+
+# Check whether at least one other monitor is active.
+has_external_display() {
+  hyprctl monitors -j | jq -e \
+    --arg internal "$INTERNAL" \
+    'any(.[]; .name != $internal and .disabled != true)' \
+    >/dev/null
+}
+
+# Check whether the internal monitor is active.
+internal_active() {
+  hyprctl monitors -j | jq -e \
+    --arg internal "$INTERNAL" \
+    'any(.[]; .name == $internal and .disabled != true)' \
+    >/dev/null
+}
+
+case "${1:-}" in
+close)
+  if has_external_display; then
+    hyprctl eval \
+      'hl.monitor({ output = "eDP-1", disabled = true })'
+  fi
+  ;;
+
+open)
+  if ! internal_active; then
+    hyprctl eval \
+      'hl.monitor({
+                    output = "eDP-1",
+                    mode = "preferred",
+                    position = "0x0",
+                    scale = auto,
+      disabled = false
+                })'
+  fi
+  ;;
+
+*)
+  echo "Usage: hypr-lid {open|close}" >&2
+  exit 1
+  ;;
+esac
