@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=ChatGPT
+Comment=ChatGPT Web App
+Exec=chromium --ozone-platform=wayland --app=https://chatgpt.com
+Icon=/home/jeremy/.local/share/icons/chatgpt.png
+Terminal=false
+Categories=Network;Utility;
+StartupNotify=true
